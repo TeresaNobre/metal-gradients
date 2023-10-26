@@ -6,7 +6,7 @@
 
 #### 1.  Data preparation ####
 #### 1.1 Load data ####
-metals <- read.csv("~/Documents/MScProject/Data/TraceMetals.csv")
+metals <- read.csv("~/PATH/TraceMetals.csv")
 
 #### 1.2 Calculate distances between stations ####
 require(geosphere)
