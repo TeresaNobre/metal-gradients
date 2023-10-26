@@ -6,9 +6,9 @@
 
 #### 1.  Spatial data ####
 #### 1.1 Sites ####
-sites <- read.csv("~/Documents/MScProject/Data/gradient.csv")
+sites <- read.csv("~/PATH/gradient.csv")
 # load island data
-site <- read.csv("~/Documents/MScProject/Data/comparison.csv") # load mainland data
+site <- read.csv("~/PATH/comparison.csv") # load mainland data
 sites <- sites[c(1,4,19,20,34,49,64,65,74,83,86,89,104,119,
                  131,134,149,161,163,165,167,168,169),2:5] # extract useful data
 site <- site[1,2:4] # extract useful data
@@ -24,14 +24,14 @@ require(sf) # this package makes shapefile manipulation possible
 # note that despite my effort to reduce their size through cropping, the following shapefiles
 # take very long to load; allow for between five and ten minutes
 Sper.crop <- c(xmin = 119.2, xmax = 119.5, ymin = -5.3, ymax = -4.8) # limits of the Spermonde Archipelago map
-land <- read_sf("~/Documents/MScProject/Data/OSM/land_polygons.shp") %>% 
+land <- read_sf("~/PATH/land_polygons.shp") %>% 
   st_crop(Sper.crop) # crop Indonesian landmasses shapefile down to the Spermonde Archipelago
-roads <- read_sf("~/Documents/MScProject/Data/OSMextra/gis_osm_roads_free_1.shp") %>% 
+roads <- read_sf("~/PATH/gis_osm_roads_free_1.shp") %>% 
   st_crop(Sper.crop) # crop Indonesian roads shapefile down to the Spermonde Archipelago
 Lomp.crop <- c(xmin = 119.32, xmax = 119.34, ymin = -5.06, ymax = -5.04) # limits of Pulau Bara Lompo
-build1 <- read_sf("~/Documents/MScProject/Data/OSMextra/gis_osm_buildings_a_free_1.shp") %>% 
+build1 <- read_sf("~/PATH/gis_osm_buildings_a_free_1.shp") %>% 
   st_crop(Lomp.crop) # crop Indonesian buildings shapefile down to Pulau Bara Lompo
-build2 <- read_sf("~/Documents/MScProject/Data/OSMextra/gis_osm_buildings_a_free_3.shp") %>% 
+build2 <- read_sf("~/PATH/gis_osm_buildings_a_free_3.shp") %>% 
   st_crop(Lomp.crop) # crop Indonesian buildings shapefile down to Pulau Bara Lompo
 
 #### 1.3 Bathymetry ####
@@ -39,7 +39,7 @@ build2 <- read_sf("~/Documents/MScProject/Data/OSMextra/gis_osm_buildings_a_free
 # bathy <- getNOAA.bathy(lon1 = 119, lon2 = 120, lat1 = -6, lat2 = -4,
 #                        resolution = 1) # extract high 30 arcsecond bathymetry data
 # bathy <- fortify.bathy(bathy) # convert bathymetry data into dataframe
-reef <- read.csv("~/Documents/MScProject/Data/reef.edge.csv") # load reef edge data
+reef <- read.csv("~/PATH/reef.edge.csv") # load reef edge data
 
 #### 2.  Visualisation ####
 #### 2.1 Set theme ####
