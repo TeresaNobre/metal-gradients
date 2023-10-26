@@ -3,7 +3,7 @@
 
 #### 1.  Data preparation ####
 #### 1.1 Load data ####
-metals <- read.csv("~/Documents/MScProject/Data/CombinedDataframe.csv")
+metals <- read.csv("~/PATH/CombinedDataframe.csv")
 
 require(geosphere)
 # North
