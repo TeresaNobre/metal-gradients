@@ -6,7 +6,7 @@
 
 #### 1.  Data preparation ####
 #### 1.1 Load data ####
-metals <- read.csv("~/Documents/MScProject/Data/CommonMetals.csv")
+metals <- read.csv("~/PATH/CommonMetals.csv")
 
 #### 1.2 Calculate distances between stations ####
 require(geosphere)
@@ -403,8 +403,6 @@ sFep <- ggplot() +
         scale_y_continuous(expand = c(0, 0), breaks = seq(0, 9000, by = 1500)) +
         mytheme
 sFep # dimensions: 4 x 5 in
-
-
 
 
 
