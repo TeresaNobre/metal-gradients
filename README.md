@@ -1,2 +1,2 @@
 # Trace-metals
-Data and code accompanying trace metals article
+Data and code accompanying metals pollution gradients article
