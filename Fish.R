@@ -1,6 +1,6 @@
 #### 1.  Data preparation ####
 #### 1.1 Load data ####
-fish <- read.csv("~/Desktop/Teresa MSc/Data/Fishy.csv")
+fish <- read.csv("~/PATH/Fish.csv")
 
 MPI <- fish$MPI
 Al <- fish$Al
